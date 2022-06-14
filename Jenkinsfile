@@ -1,5 +1,5 @@
 pipeline {
-    agent gopi
+    agent {label 'gopi'}
     stages {
         stage('git-clone') {
             steps {
