@@ -34,7 +34,7 @@
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://http://10.0.182.17:8081/repository/admin</url>
+            <url>http://10.0.182.17:8081/repository/admin/</url>
         </snapshotRepository>
     </distributionManagement>
   <dependencies>
