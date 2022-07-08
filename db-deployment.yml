@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-mysql
+spec:
+  selector:
+    matchLabels:
+      app: student-mysql
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: student-mysql
+    spec:
+      containers:
+      - image: mysql:5.6
+        name: student-mysql
+        env:
+          # Use secret in real usage
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        ports:
+        - containerPort: 3306
+          name: student-mysql
+        volumeMounts:
+        - name: mysql-persistent-storage-dev
+          mountPath: /var/lib/mysql-dev
+      volumes:
+      - name: mysql-persistent-storage-dev
+        persistentVolumeClaim:
+          claimName: student-pvc
