@@ -25,7 +25,7 @@ spec:
           name: student-mysql
         volumeMounts:
         - name: mysql-persistent-storage-dev
-          mountPath: /var/lib/mysql-dev
+          mountPath: /var/lib/mysql
       volumes:
       - name: mysql-persistent-storage-dev
         persistentVolumeClaim:
