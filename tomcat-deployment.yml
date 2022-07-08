@@ -13,6 +13,6 @@ spec:
     spec:
       containers:
         - name: tomcat-container-student
-          image: gcr.io/kodekloud/centos-ssh-enabled:tomcat
+          image: satish736/tomcat-student:1.0
           ports:
             - containerPort: 8080
