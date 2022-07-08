@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: Student
+      app: Studentapp
   template:
     metadata:
       labels:
