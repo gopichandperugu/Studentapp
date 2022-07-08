@@ -1,5 +1,5 @@
 FROM tomcat:jdk8-openjdk
 LABEL maintainer="devops090@mail.com"
-ADD Studentapp.war /usr/local/tomcat/webapps/ #webapp1, webapp2,... webappN
+ADD studentapp.war /usr/local/tomcat/webapps/ #webapp1, webapp2,... webappN
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
