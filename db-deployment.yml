@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: student-mysql
+      app: Studentapp
   strategy:
     type: Recreate
   template:
