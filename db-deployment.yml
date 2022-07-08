@@ -14,7 +14,7 @@ spec:
         app: student-mysql
     spec:
       containers:
-      - image: mysql:5.6
+      - image: satish736/mysql:1.0
         name: student-mysql
         env:
           # Use secret in real usage
