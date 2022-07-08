@@ -1,0 +1,18 @@
+apiVersion: apps/v1                          
+kind: Deployment
+metadata:
+  name: tomcat-deployment-student
+spec:
+  selector:
+    matchLabels:
+      app: Student
+  template:
+    metadata:
+      labels:
+        app: tomcat-deployment-student
+    spec:
+      containers:
+        - name: tomcat-container-student
+          image: gcr.io/kodekloud/centos-ssh-enabled:tomcat
+          ports:
+            - containerPort: 8080
