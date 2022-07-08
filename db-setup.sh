@@ -2,4 +2,4 @@
 set -e
 service mysql start
 mysql < /mysql/studentapp.sql
-#service mysql stop
+service mysql stop
