@@ -14,8 +14,13 @@ spec:
         app: student-mysql
     spec:
       containers:
-      - image: satish736/mysql:1.0
-        name: student-mysql
+       - name: satish736
+         image: satish736/mysql:1.0
+#      image: acmeorg/consul:latest
+         imagePullPolicy: Always
+         command: [ "echo", "SUCCESS" ]
+      imagePullSecrets:
+        - name: satish736
         env:
           # Use secret in real usage
         - name: MYSQL_ROOT_PASSWORD
