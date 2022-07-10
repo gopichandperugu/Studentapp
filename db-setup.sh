@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 service mysql start
-mysql < /mysql/studentapp.sql
+mysql -uroot -ppassword < /mysql/studentapp.sql
 #service mysql stop
