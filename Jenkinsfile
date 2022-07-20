@@ -12,7 +12,7 @@ pipeline {
                sh 'docker run gesellix/trufflehog --json https://github.com/gopichandperugu/Studentapp.git > trufflehog'
            }
     }
-    stages {
+    /*stages {*/
         stage('mvn-clean') {
             steps {
                sh 'mvn clean'
