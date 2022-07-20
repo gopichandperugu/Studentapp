@@ -11,20 +11,25 @@ pipeline {
                sh 'mvn compile'
             }
         }
-       /* stage('mvn-sonar'){
-            steps{
-                sh 'mvn sonar:sonar -Dsonar.projectKey=pipeline-practise -Dsonar.host.url=http://34.125.149.108:9000 -Dsonar.login=cd1023876cebbda95240ba15749accd78acb3703'
+        stage('OWASP-Dependecy-check') {
+            steps {
+               sh 'dependecy-check.sh --scan .'
             }
-        } */
+        }
+        stage('mvn-sonar'){
+            steps{
+                sh 'mvn sonar:sonar -Dsonar.projectKey=student -Dsonar.host.url=http://jenkins-sonar-nexus.nstdevsecops.xyz:9000 -Dsonar.login=sqp_af754668df9217f3335045c64e969f71f3b57ac2'
+            }
+        } 
         stage('mvn-Package') {
             steps {
                sh 'mvn package'
             }
         }
-        stage('mvn-Deploy-nexus-backup') {
+        /*stage('mvn-Deploy-nexus-backup') {
             steps {
                sh 'mvn deploy'
             }
-        }
+        }*/
     }
 }
