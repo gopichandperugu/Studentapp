@@ -29,12 +29,12 @@
         <repository>
             <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://jenkins-sonar-nexus.nstdevsecops.xyz:8081/repository/student/</url>
+            <url>http://10.182.0.30:8081/repository/student/</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://jenkins-sonar-nexus.nstdevsecops.xyz:8081/repository/student/</url>
+            <url>http://10.182.0.30:8081/repository/student/</url>
         </snapshotRepository>
     </distributionManagement>
   <dependencies>
