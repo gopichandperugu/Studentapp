@@ -18,6 +18,7 @@ pipeline {
         }
         stage('mvn-sonar'){
             steps{
+                sh 'java --version'
                 sh 'mvn sonar:sonar -Dsonar.projectKey=student -Dsonar.host.url=http://jenkins-sonar-nexus.nstdevsecops.xyz:9000 -Dsonar.login=sqp_af754668df9217f3335045c64e969f71f3b57ac2'
             }
         } 
