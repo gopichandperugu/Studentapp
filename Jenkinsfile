@@ -26,6 +26,7 @@ pipeline {
         stage('OWASP-Dependecy-check') {
             steps {
                sh 'sudo bash /usr/bin/dependency-check.sh --scan ./../Studentapp/'
+               sh 'cat /var/lib/jenkins/workspace/DevSecOps/Studentapp/./dependency-check-report.html'
             }
         }
         stage('mvn-sonar'){
