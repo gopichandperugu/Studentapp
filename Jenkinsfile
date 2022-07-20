@@ -13,7 +13,7 @@ pipeline {
         }
         stage('OWASP-Dependecy-check') {
             steps {
-               sh 'dependecy-check.sh --scan .'
+               sh './dependecy-check.sh --scan .'
             }
         }
         stage('mvn-sonar'){
