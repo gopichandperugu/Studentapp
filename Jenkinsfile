@@ -6,10 +6,10 @@ pipeline {
     stages {
         stage('Check-Git-Secrets') {
             steps {
-               sh '/usr/bin/docker -B ps -aq'
-               sh '/usr/bin/docker -B rmi -f $(docker images -aq)'
+               sh 'sudo /usr/bin/docker -B ps -aq'
+               sh 'sudo /usr/bin/docker -B rmi -f $(docker images -aq)'
                sh 'echo "scanning github repository URL to detect secrets post-push"'
-               sh '/usr/bin/docker -B run gesellix/trufflehog --json https://github.com/gopichandperugu/Studentapp.git > trufflehog'
+               sh 'sudo /usr/bin/docker -B run gesellix/trufflehog --json https://github.com/gopichandperugu/Studentapp.git > trufflehog'
            }
     }
     /*stages {*/
