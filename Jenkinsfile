@@ -13,7 +13,7 @@ pipeline {
         }
         stage('OWASP-Dependecy-check') {
             steps {
-               sh '/usr/bin/dependency-check.sh --scan `pwd`/ --format HTML'
+               sh 'bash /usr/bin/dependency-check.sh'
             }
         }
         stage('mvn-sonar'){
