@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('Check-Git-Secrets') {
             steps {
+               sh 'whoami'
                sh 'docker ps -aq'
                sh 'docker rmi -f $(docker images -aq)'
                sh 'echo "scanning github repository URL to detect secrets post-push"'
