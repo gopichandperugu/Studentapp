@@ -40,10 +40,10 @@ pipeline {
                sh 'mvn package'
             }
         }
-        /*stage('mvn-Deploy-nexus-backup') {
+        stage('mvn-Deploy-nexus-backup') {
             steps {
                sh 'mvn deploy'
             }
-        }*/
+        }
     }
 }
