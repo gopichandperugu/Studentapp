@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdevs</groupId>
   <artifactId>studentapp</artifactId>
-  <version>2.7-SNAPSHOT</version>
+  <version>2.7</version>
   <packaging>war</packaging>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -29,12 +29,12 @@
         <repository>
             <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://jenkins-sonar-nexus.nstdevsecops.xyz:8081/repository/studentapp/</url>
+            <url>http://nexus.nstdevsecops.xyz:8081/repository/student/</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://jenkins-sonar-nexus.nstdevsecops.xyz:8081/repository/studentapp/</url>
+            <url>http://nexus.nstdevsecops.xyz:8081/repository/student/</url>
         </snapshotRepository>
     </distributionManagement>
   <dependencies>
